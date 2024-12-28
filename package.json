@@ -9,13 +9,15 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "axios": "^1.7.9",
     "expo": "~52.0.23",
+    "expo-font": "~13.0.2",
+    "expo-location": "~18.0.4",
     "expo-status-bar": "~2.0.0",
     "react": "18.3.1",
     "react-native": "0.76.5",
     "react-native-safe-area-context": "^5.0.0",
-    "react-native-wheater-app": "file:",
-    "expo-location": "~18.0.4"
+    "react-native-wheater-app": "file:"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"

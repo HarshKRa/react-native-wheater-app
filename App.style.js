@@ -8,6 +8,6 @@ export const s = StyleSheet.create({
     flex: 1,
   },
   img: {
-    opacity: 0.75,
+    opacity: 1,
   },
 });

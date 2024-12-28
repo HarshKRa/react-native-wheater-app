@@ -1,12 +1,14 @@
 {
   "expo": {
+    "jsEngine": "jsc",
     "plugins": [
       [
         "expo-location",
         {
           "locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location."
         }
-      ]
+      ],
+      "expo-font"
     ],
     "name": "react-native-wheater-app",
     "slug": "react-native-wheater-app",
