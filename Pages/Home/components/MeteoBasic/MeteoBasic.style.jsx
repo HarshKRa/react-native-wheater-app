@@ -1,10 +1,12 @@
 import { StyleSheet } from "react-native";
 
 export const s = StyleSheet.create({
+  contaioner: {
+    gap: 12,
+  },
   clock: {
     alignItems: "flex-end",
   },
-  city: {},
   interpretation: {
     alignSelf: "flex-end",
     transform: [{ rotate: "-90deg" }],
@@ -18,7 +20,7 @@ export const s = StyleSheet.create({
     alignItems: "baseline",
   },
   temperature: {
-    fontSize: 130,
+    fontSize: 100,
   },
   image: {
     height: 90,

@@ -6,8 +6,11 @@ export const s = StyleSheet.create({
   },
   container: {
     flex: 1,
-    backgroundColor: "#000000",
+    backgroundColor: "#1d1d1d",
     opacity: 0.6,
+    paddingHorizontal: 15,
+    paddingTop: 20,
+    paddingBottom: 40,
   },
   img: {
     opacity: 1,

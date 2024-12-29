@@ -8,10 +8,10 @@ export function Header({ city }) {
   return (
     <View style={s.container}>
       <TouchableOpacity style={s.back_btn} onPress={nav.goBack}>
-        <Txt>{"<"}</Txt>
+        <Txt>{"⟵"}</Txt>
       </TouchableOpacity>
-      <View style={s.header_txts}>
-        <Txt>{city.toUpperCase()}</Txt>
+      <View>
+        <Txt style={s.header_txts}>{city.toUpperCase()}</Txt>
         <Txt style={s.subtitle}>7 day forecasts</Txt>
       </View>
     </View>

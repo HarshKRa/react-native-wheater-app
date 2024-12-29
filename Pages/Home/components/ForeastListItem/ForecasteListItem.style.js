@@ -5,7 +5,6 @@ export const s = StyleSheet.create({
   container: {
     flexDirection: "row",
     justifyContent: "space-between",
-    paddingHorizontal: 20,
     alignItems: "center",
   },
   image: {

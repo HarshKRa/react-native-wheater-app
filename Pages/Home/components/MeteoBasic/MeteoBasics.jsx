@@ -12,7 +12,7 @@ export function MeteoBasics({
 }) {
   const nav = useNavigation();
   return (
-    <View>
+    <View style={s.contaioner}>
       <View style={s.clock}>
         <Clock />
       </View>

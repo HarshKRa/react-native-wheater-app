@@ -6,8 +6,6 @@ export const s = StyleSheet.create({
     flex: 1,
     flexDirection: "row",
     backgroundColor: "#0000005c",
-    marginHorizontal: 12,
-    marginBottom: 20,
     alignItems: "center",
     justifyContent: "space-evenly",
     borderColor: "white",

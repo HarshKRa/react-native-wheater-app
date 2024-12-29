@@ -22,19 +22,26 @@ export default function Forecasts() {
           day: "numeric",
           month: "numeric",
         });
+
+        const formmatedateResult = formattedDate
+          .split("/")
+          .map((item) => {
+            return item.toString().padStart(2, "0");
+          })
+          .join("/");
+
         return (
           <ForecasteListItem
             key={time}
             image={interpretation.image}
             day={dayOfWeek}
-            date={formattedDate}
+            date={formmatedateResult}
             temperature={Math.floor(temperature)}
           />
         );
       })}
     </View>
   );
-  console.log(params);
   return (
     <>
       <Header city={params.city} />

@@ -54,6 +54,11 @@ export default function App() {
     setCity(cityResponse);
   }
 
+  async function fetchCoordsByCity(city) {
+    const coordsResponse = await MetoAPI.fetchCoordsByCity(city);
+    setCoordinates(coordsResponse);
+  }
+
   async function getUserCordinates() {
     const { status } = await requestForegroundPermissionsAsync();
 
@@ -82,7 +87,7 @@ export default function App() {
                 initialRouteName="Home"
               >
                 <Stack.Screen name="Home">
-                  {() => <Home city={city} weather={weather} />}
+                  {() => <Home city={city} weather={weather} onSubmitSearch={fetchCoordsByCity} />}
                 </Stack.Screen>
                 <Stack.Screen name="Forecasts" component={Forecasts} />
               </Stack.Navigator>
