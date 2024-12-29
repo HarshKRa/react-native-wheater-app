@@ -3,17 +3,20 @@ import { s } from "./Home.style";
 import Txt from "./components/Txt/Txt";
 import { MeteoBasics } from "./components/MeteoBasic/MeteoBasics";
 import { getWeatherInterpretation } from "../../Utils/Meteo-utils";
+import MetoAdvance from "./components/MetoAdvance/MetoAdvance";
 
-export default function Home({ weather }) {
+export default function Home({ city, weather }) {
   const currentWeather = weather.current_weather;
   const currentInterPretation = getWeatherInterpretation(
     currentWeather.weathercode
   );
-  console.log(weather);
+
   return (
     <>
       <View style={s.meteo_basic}>
         <MeteoBasics
+          dailyWeather={weather.daily}
+          city={city}
           interpretation={currentInterPretation}
           temperature={Math.round(currentWeather.temperature)}
         />
@@ -22,7 +25,11 @@ export default function Home({ weather }) {
         <Txt>Search Bar</Txt>
       </View>
       <View style={s.meteo_advance}>
-        <Txt>Advanced weather info</Txt>
+        <MetoAdvance
+          sunrise={weather.daily.sunrise[0].split("T")[1]}
+          sunset={weather.daily.sunset[0].split("T")[1]}
+          windspeed={currentWeather.windspeed}
+        />
       </View>
     </>
   );

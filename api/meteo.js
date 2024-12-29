@@ -8,4 +8,25 @@ export class MetoAPI {
       )
     ).data;
   }
+
+  static async fetchCityByCoords(coords) {
+    try {
+      const {
+        address: { village, state_district, state, country },
+      } = (
+        await axios.get(
+          `https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${coords.lat}&lon=${coords.lng}`,
+          {
+            headers: {
+              "User-Agent": "YourAppName/1.0 (contact@yourdomain.com)",
+            },
+          }
+        )
+      ).data;
+      console.log(village, state_district, state, country);
+      return village || state_district || state || country;
+    } catch (error) {
+      console.error("Error fetching city by coordinates:", error);
+    }
+  }
 }
